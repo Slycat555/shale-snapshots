@@ -1,14 +1,25 @@
 /* Shale Snapshots: Shale's look on top of Breeze Dark, matching Software Update.
-   Colours: #1e1e1e window, #262626 surfaces, #363636 borders, #3584e4 accent. */
+   Colours follow the user's KDE colour scheme: AppGtk.vala loads their
+   ~/.config/gtk-3.0/colors.css (written by KDE) over these Shale Dark defaults. */
+
+@define-color theme_bg_color_breeze #1e1e1e;
+@define-color theme_fg_color_breeze #ececec;
+@define-color theme_selected_bg_color_breeze #3584e4;
+
+/* Surfaces, hover and borders: 8, 16 and 24 steps lighter than the window. */
+@define-color shale_surface mix(@theme_bg_color_breeze, #ffffff, 0.035);
+@define-color shale_hover mix(@theme_bg_color_breeze, #ffffff, 0.07);
+@define-color shale_border mix(@theme_bg_color_breeze, #ffffff, 0.105);
+@define-color shale_accent_hover mix(@theme_selected_bg_color_breeze, #ffffff, 0.1);
 
 window, .background, dialog {
-  background-color: #1e1e1e;
-  color: #ececec;
+  background-color: @theme_bg_color_breeze;
+  color: @theme_fg_color_breeze;
 }
 
 /* Toolbar: flat, rounded buttons that light up on hover */
 toolbar, .toolbar, .primary-toolbar {
-  background: #1e1e1e;
+  background: @theme_bg_color_breeze;
   border: none;
   box-shadow: none;
   padding: 6px 8px;
@@ -19,30 +30,30 @@ toolbar button, .toolbar button {
   box-shadow: none;
   border-radius: 8px;
   padding: 6px 10px;
-  color: #ececec;
+  color: @theme_fg_color_breeze;
 }
-toolbar button:hover, .toolbar button:hover { background: #2e2e2e; }
-toolbar button:active, .toolbar button:active { background: #363636; }
+toolbar button:hover, .toolbar button:hover { background: @shale_hover; }
+toolbar button:active, .toolbar button:active { background: @shale_border; }
 
 /* Snapshot list */
 scrolledwindow, frame > border {
-  border-color: #363636;
+  border-color: @shale_border;
 }
 treeview.view {
-  background-color: #262626;
-  color: #ececec;
+  background-color: @shale_surface;
+  color: @theme_fg_color_breeze;
 }
-treeview.view:hover { background-color: #2e2e2e; }
+treeview.view:hover { background-color: @shale_hover; }
 treeview.view:selected, treeview.view:selected:focus {
-  background-color: #3584e4;
+  background-color: @theme_selected_bg_color_breeze;
   color: #ffffff;
 }
 treeview.view header button {
-  background: #262626;
+  background: @shale_surface;
   background-image: none;
   color: #9a9a9a;
   border: none;
-  border-bottom: 1px solid #363636;
+  border-bottom: 1px solid @shale_border;
   box-shadow: none;
   padding: 6px 8px;
 }
@@ -52,12 +63,12 @@ button {
   border-radius: 8px;
 }
 button.suggested-action {
-  background: #3584e4;
+  background: @theme_selected_bg_color_breeze;
   background-image: none;
-  border-color: #3584e4;
+  border-color: @theme_selected_bg_color_breeze;
   color: #ffffff;
 }
-button.suggested-action:hover { background: #4a92ea; border-color: #4a92ea; }
+button.suggested-action:hover { background: @shale_accent_hover; border-color: @shale_accent_hover; }
 entry, spinbutton, combobox button {
   border-radius: 8px;
 }

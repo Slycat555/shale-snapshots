@@ -113,6 +113,23 @@ public class AppGtk : GLib.Object {
 		catch (Error e) {
 			log_error(e.message);
 		}
+
+		// Follow the colour scheme of the user who opened the app (Shale Dark, Shale Darker,
+		// ...): KDE writes it to their gtk-3.0/colors.css, which overrides shale.css's defaults.
+		unowned Posix.Passwd? pw = Posix.getpwuid(TeeJee.System.get_user_id());
+		if (pw == null) { return; }
+		string colors_path = GLib.Path.build_filename(pw.pw_dir, ".config", "gtk-3.0", "colors.css");
+		if (!FileUtils.test(colors_path, FileTest.IS_REGULAR)) { return; }
+
+		var colors = new Gtk.CssProvider();
+		try {
+			colors.load_from_path(colors_path);
+			Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), colors,
+				Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1);
+		}
+		catch (Error e) {
+			log_error(e.message);
+		}
 	}
 
 	private static void set_locale() {
