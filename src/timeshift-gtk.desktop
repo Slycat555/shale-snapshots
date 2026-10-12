@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Timeshift
+Name=Shale Snapshots
 Exec=timeshift-launcher
 Type=Application
 GenericName=System Restore Utility
@@ -14,7 +14,7 @@ GenericName[lt]=Sistemos atkūrimo paslaugų programa
 GenericName[nl]=Hulpmiddel voor systeemherstel
 GenericName[ru]=Программа для восстановления системы
 Terminal=false
-Icon=timeshift
+Icon=shale-snapshots
 Comment=System Restore Utility
 Comment[ca]=Utilitat de restauració del sistema
 Comment[cs]=Nástroj pro obnovení systému
@@ -29,4 +29,4 @@ Comment[ru]=Программа для восстановления систем�
 X-KDE-StartupNotify=false
 Categories=System;
 X-GNOME-UsesNotifications=true
-Keywords=backup;btrfs;rsync;
+Keywords=backup;restore;snapshot;rollback;timeshift;btrfs;rsync;

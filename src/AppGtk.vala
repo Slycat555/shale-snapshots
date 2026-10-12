@@ -35,7 +35,7 @@ using TeeJee.System;
 using TeeJee.Misc;
 
 public Main App;
-public const string AppName = "Timeshift-gtk";
+public const string AppName = "Shale Snapshots";
 public const string AppShortName = "timeshift";
 public const string AppVersion = Constants.VERSION;
 public const string AppAuthor = "Tony George";

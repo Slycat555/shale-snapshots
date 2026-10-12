@@ -70,7 +70,7 @@ class RestoreWindow : Gtk.Window{
         this.window_position = WindowPosition.CENTER;
         this.modal = true;
         this.set_default_size (def_width, def_height);
-		this.icon = IconManager.lookup("timeshift",16);
+		this.icon = IconManager.lookup("shale-snapshots",16);
 
 		this.resize(def_width, def_height);
 

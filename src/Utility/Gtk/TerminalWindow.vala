@@ -68,7 +68,7 @@ public class TerminalWindow : Gtk.Window {
 	public void init_window () {
 		
 		this.title = "";
-		this.icon = IconManager.lookup("timeshift",16);
+		this.icon = IconManager.lookup("shale-snapshots",16);
 		this.resizable = true;
 		this.deletable = false;
 		

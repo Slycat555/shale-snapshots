@@ -70,12 +70,12 @@ class MainWindow : Gtk.Window{
 
 		log_debug("MainWindow: MainWindow()");
 		
-		this.title = "Timeshift";
+		this.title = "Shale Snapshots";
         this.window_position = WindowPosition.CENTER;
         this.modal = true;
         this.set_default_size (def_width, def_height);
 		this.delete_event.connect(on_delete_event);
-		this.icon = IconManager.lookup("timeshift",16);
+		this.icon = IconManager.lookup("shale-snapshots",16);
 
 	    //vbox_main
         vbox_main = new Gtk.Box(Orientation.VERTICAL, 0);
@@ -1014,7 +1014,7 @@ class MainWindow : Gtk.Window{
 						// has snaps
 						img_shield.surface = IconManager.lookup_surface(IconManager.SHIELD_HIGH, IconManager.SHIELD_ICON_SIZE, img_shield.scale_factor);
 						//set_shield_label(_("System is protected"));
-						set_shield_label(_("Timeshift is active"));
+						set_shield_label(_("Snapshots are on"));
 						set_shield_subnote("%s: %s\n%s: %s".printf(
 							_("Latest snapshot"),
 							(last_snapshot_date == null) ? _("None") : last_snapshot_date.format(App.date_format),
@@ -1025,7 +1025,7 @@ class MainWindow : Gtk.Window{
 					else{
 						// no snaps
 						img_shield.surface = IconManager.lookup_surface(IconManager.SHIELD_HIGH, IconManager.SHIELD_ICON_SIZE, img_shield.scale_factor);
-						set_shield_label(_("Timeshift is active"));
+						set_shield_label(_("Snapshots are on"));
 						set_shield_subnote(_("Snapshots will be created at selected intervals"));
 					}
 				}

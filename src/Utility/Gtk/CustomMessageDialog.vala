@@ -78,7 +78,7 @@ public class CustomMessageDialog : Gtk.Dialog {
 		
 		this.title = "";
 		this.window_position = WindowPosition.CENTER_ON_PARENT;
-		this.icon = IconManager.lookup("timeshift", 16);
+		this.icon = IconManager.lookup("shale-snapshots", 16);
 		this.resizable = false;
 		this.deletable = false;
 		this.skip_taskbar_hint = true;

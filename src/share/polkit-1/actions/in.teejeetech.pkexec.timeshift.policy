@@ -6,9 +6,9 @@
   <vendor>Tony George</vendor>
   <vendor_url>https://github.com/teejee2008</vendor_url>
   <action id="in.teejeetech.pkexec.timeshift-gtk">
-    <message gettext-domain="timeshift">Timeshift</message>
-    <description>Run Timeshift as Administrator</description>
-    <icon_name>timeshift</icon_name>
+    <message gettext-domain="timeshift">Shale Snapshots</message>
+    <description>Run Shale Snapshots as Administrator</description>
+    <icon_name>shale-snapshots</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
@@ -18,9 +18,9 @@
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
   </action>
   <action id="in.teejeetech.pkexec.timeshift">
-    <message gettext-domain="timeshift">Authentication is required to run Timeshift as Administrator</message>
-    <description>Run Timeshift as Administrator</description>
-    <icon_name>timeshift</icon_name>
+    <message gettext-domain="timeshift">Authentication is required to manage snapshots</message>
+    <description>Run Shale Snapshots as Administrator</description>
+    <icon_name>shale-snapshots</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>

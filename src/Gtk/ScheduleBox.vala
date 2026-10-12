@@ -153,7 +153,7 @@ class ScheduleBox : Gtk.Box{
 		
 		chk_cron = add_checkbox(this, _("Stop cron emails for scheduled tasks"));
 		//chk_cron.hexpand = true;
-		chk_cron.set_tooltip_text(_("The cron service sends the output of scheduled tasks as an email to the current user. Select this option to suppress the emails for cron tasks created by Timeshift."));
+		chk_cron.set_tooltip_text(_("The cron service sends the output of scheduled tasks as an email to the current user. Select this option to suppress the emails for cron tasks created by Shale Snapshots."));
 
 		chk_cron.margin = 6;
 		chk_cron.margin_top = 12;	

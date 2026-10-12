@@ -49,7 +49,7 @@ public class RsyncLogWindow : Window {
 		this.title = _("Rsync Log Viewer");
 		this.window_position = Gtk.WindowPosition.CENTER_ON_PARENT;
 		this.set_default_size(def_width, def_height);
-		this.icon = IconManager.lookup("timeshift",16);
+		this.icon = IconManager.lookup("shale-snapshots",16);
 		this.resizable = true;
 		this.modal = true;
 

@@ -99,7 +99,7 @@ class RestoreFinishBox : Gtk.Box{
 			}
 
 			if (!App.btrfs_mode){
-				msg += bullet + _("If the restored system fails to boot, then boot from the Live CD/USB, install Timeshift, and try restoring another snapshot.") + "\n\n";
+				msg += bullet + _("If the restored system fails to boot, then boot from the Live CD/USB, install Shale Snapshots (Timeshift), and try restoring another snapshot.") + "\n\n";
 			}
 
 			msg += "\n";

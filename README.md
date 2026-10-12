@@ -1,3 +1,18 @@
+# Shale Snapshots
+
+System snapshots and rollback for [Shale Linux](https://github.com/slycat555/shale-linux).
+This is a fork of [Timeshift](https://github.com/linuxmint/timeshift) by Tony George and
+the Linux Mint team, kept close to upstream (the `shale` branch) so fixes can be merged:
+
+- shown as **Shale Snapshots**, with its own icon
+- built without XApp and man pages by default
+- commands, settings (`/etc/timeshift`) and the snapshot format are unchanged, so it is
+  a drop-in replacement for the `timeshift` package
+
+Timeshift's original README follows.
+
+---
+
 # Timeshift
 
 Timeshift for Linux is an application that provides functionality similar to the _System Restore_ feature in Windows and the _Time Machine_ tool in Mac OS. Timeshift protects your system by taking incremental snapshots of the file system at regular intervals. These snapshots can be restored at a later date to undo all changes to the system. 

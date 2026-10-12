@@ -269,7 +269,7 @@ public class Main : GLib.Object{
 			if (gui_mode){
 				string msg = "";
 				if (app_lock.lock_message == "backup"){
-					msg = _("Another instance of Timeshift is creating a snapshot.") + "\n";
+					msg = _("Another snapshot is already being created.") + "\n";
 					msg += _("Please wait a few minutes and try again.");
 				}
 				else{
