@@ -363,7 +363,7 @@ class MainWindow : Gtk.Window{
 
 		if (!App.live_system()){
 			// app logs
-			menu_item = create_menu_item(_("View TimeShift Logs"));
+			menu_item = create_menu_item(_("View Shale Snapshots Logs"));
 			menu_extra.append(menu_item);
 			menu_item.activate.connect(btn_view_app_logs_clicked);
 

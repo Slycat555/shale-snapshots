@@ -1,0 +1,63 @@
+/* Shale Snapshots: Shale's look on top of Breeze Dark, matching Software Update.
+   Colours: #1e1e1e window, #262626 surfaces, #363636 borders, #3584e4 accent. */
+
+window, .background, dialog {
+  background-color: #1e1e1e;
+  color: #ececec;
+}
+
+/* Toolbar: flat, rounded buttons that light up on hover */
+toolbar, .toolbar, .primary-toolbar {
+  background: #1e1e1e;
+  border: none;
+  box-shadow: none;
+  padding: 6px 8px;
+}
+toolbar button, .toolbar button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #ececec;
+}
+toolbar button:hover, .toolbar button:hover { background: #2e2e2e; }
+toolbar button:active, .toolbar button:active { background: #363636; }
+
+/* Snapshot list */
+scrolledwindow, frame > border {
+  border-color: #363636;
+}
+treeview.view {
+  background-color: #262626;
+  color: #ececec;
+}
+treeview.view:hover { background-color: #2e2e2e; }
+treeview.view:selected, treeview.view:selected:focus {
+  background-color: #3584e4;
+  color: #ffffff;
+}
+treeview.view header button {
+  background: #262626;
+  background-image: none;
+  color: #9a9a9a;
+  border: none;
+  border-bottom: 1px solid #363636;
+  box-shadow: none;
+  padding: 6px 8px;
+}
+
+/* Buttons and fields, as in Shale's apps */
+button {
+  border-radius: 8px;
+}
+button.suggested-action {
+  background: #3584e4;
+  background-image: none;
+  border-color: #3584e4;
+  color: #ffffff;
+}
+button.suggested-action:hover { background: #4a92ea; border-color: #4a92ea; }
+entry, spinbutton, combobox button {
+  border-radius: 8px;
+}

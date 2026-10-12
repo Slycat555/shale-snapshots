@@ -68,8 +68,14 @@ public class OSDNotify : GLib.Object {
 				string desktop_entry = "timeshift-gtk";
 				string hint = "string:desktop-entry:%s".printf(desktop_entry);
 
+				// Shale Snapshots' own icon (gtk-dialog-* icons are missing from most
+				// icon themes, so notifications showed a blank file icon).
+				string icon = "shale-snapshots";
+				if (dialog_type == "warning") { icon = "/usr/share/timeshift/images/shale-status-warn.svg"; }
+				else if (dialog_type == "error") { icon = "/usr/share/timeshift/images/shale-status-error.svg"; }
+
 				string s = "notify-send -t %d -u %s -i %s \"%s\" \"%s\" -h %s".printf(
-					durationMillis, urgency, "gtk-dialog-" + dialog_type, title, message, hint);
+					durationMillis, urgency, icon, title, message, hint);
 				
 				retVal = TeeJee.ProcessHelper.exec_user_async(s);
 				

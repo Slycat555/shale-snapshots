@@ -273,7 +273,7 @@ public class Main : GLib.Object{
 					msg += _("Please wait a few minutes and try again.");
 				}
 				else{
-					msg = _("Another instance of timeshift is currently running!") + "\n";
+					msg = _("Shale Snapshots is already running!") + "\n";
 					msg += _("Please check if you have multiple windows open.") + "\n";
 				}
 
@@ -365,7 +365,7 @@ public class Main : GLib.Object{
 
 		if (msg.length > 0){
 			msg = _("Commands listed below are not available on this system") + ":\n\n" + msg + "\n";
-			msg += _("Please install required packages and try running TimeShift again");
+			msg += _("Please install required packages and try opening Shale Snapshots again");
 			log_error(msg);
 			return false;
 		}

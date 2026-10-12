@@ -72,6 +72,8 @@ public class AppGtk : GLib.Object {
 
 		GTK_INITIALIZED = true;
 
+		apply_shale_style();
+
 		init_tmp();
 
 		check_if_admin();
@@ -84,6 +86,33 @@ public class AppGtk : GLib.Object {
 		App.exit_app();
 
 		return 0;
+	}
+
+	// Shale's look. The app runs as root through pkexec, so it does not see the user's
+	// desktop theme; set Breeze Dark, Breeze icons and Noto Sans here, then load
+	// Shale's stylesheet on top so it matches Shale's own apps.
+	private static void apply_shale_style() {
+
+		var settings = Gtk.Settings.get_default();
+		if (settings != null) {
+			settings.gtk_theme_name = "Breeze-Dark";
+			settings.gtk_application_prefer_dark_theme = true;
+			settings.gtk_icon_theme_name = "breeze-dark";
+			settings.gtk_font_name = "Noto Sans 10";
+		}
+
+		string css_path = "/usr/share/timeshift/shale.css";
+		if (!FileUtils.test(css_path, FileTest.EXISTS)) { return; }
+
+		var provider = new Gtk.CssProvider();
+		try {
+			provider.load_from_path(css_path);
+			Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider,
+				Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+		}
+		catch (Error e) {
+			log_error(e.message);
+		}
 	}
 
 	private static void set_locale() {
