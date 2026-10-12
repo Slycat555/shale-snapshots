@@ -1456,7 +1456,7 @@ public class Main : GLib.Object{
 		}
 
 		log_msg(message);
-		OSDNotify.notify_send("TimeShift", message, 10000, "low");
+		OSDNotify.notify_send("Shale Snapshots", message, 10000, "low");
 
 		if (new_snapshot != null){
 			message = _("Tagged snapshot") + " '%s': %s".printf(new_snapshot.name, tag);
@@ -1929,7 +1929,7 @@ public class Main : GLib.Object{
 				status = bak.remove(true); // wait till complete
 
 				var message = "%s '%s'".printf(_("Removed"), bak.name);
-				OSDNotify.notify_send("TimeShift", message, 10000, "low");
+				OSDNotify.notify_send("Shale Snapshots", message, 10000, "low");
 			}
 			else{
 
@@ -1940,7 +1940,7 @@ public class Main : GLib.Object{
 
 				if (delete_file_task.status != AppStatus.CANCELLED){
 					var message = "%s '%s' (%s)".printf(_("Removed"), bak.name, delete_file_task.stat_time_elapsed);
-					OSDNotify.notify_send("TimeShift", message, 10000, "low");
+					OSDNotify.notify_send("Shale Snapshots", message, 10000, "low");
 				}
 			}
 

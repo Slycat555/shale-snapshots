@@ -54,9 +54,9 @@ public class IconManager : GLib.Object {
     public const string ICON_HARDDRIVE = "drive-harddisk";
 
     public const string SHIELD_LIVE= "media-optical";
-    public const string SHIELD_LOW = "timeshift-shield-low";
-    public const string SHIELD_MED = "timeshift-shield-med";
-    public const string SHIELD_HIGH = "timeshift-shield-high";
+    public const string SHIELD_LOW = "shale-status-error";
+    public const string SHIELD_MED = "shale-status-warn";
+    public const string SHIELD_HIGH = "shale-status-ok";
 
 	public static void init(string[] args, string app_name){
 

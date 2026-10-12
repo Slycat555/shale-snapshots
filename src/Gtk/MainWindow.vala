@@ -923,13 +923,13 @@ class MainWindow : Gtk.Window{
 		var dialog = new Gtk.AboutDialog();
 		dialog.set_transient_for(this);
 		dialog.set_program_name(AppName);
-		dialog.set_comments(_("System Restore Utility"));
+		dialog.set_comments(_("System snapshots and rollback for Shale Linux, based on Timeshift"));
 		dialog.set_copyright("Copyright © 2012-21 Tony George (%s)".printf(AppAuthorEmail));
 		dialog.set_version(AppVersion);
-		dialog.set_logo_icon_name("timeshift");
+		dialog.set_logo_icon_name("shale-snapshots");
 		dialog.set_license_type(Gtk.License.GPL_2_0);
-		dialog.set_website_label("https://github.com/linuxmint/timeshift");
-		dialog.set_website("https://github.com/linuxmint/timeshift");
+		dialog.set_website_label("github.com/Slycat555/shale-snapshots");
+		dialog.set_website("https://github.com/Slycat555/shale-snapshots");
 
 		// this overwrites the default behaviour of About Dialog
 		dialog.activate_link.connect(TeeJee.System.xdg_open);
